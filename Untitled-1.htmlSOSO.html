@@ -1,0 +1,89 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Busca Inteligente</title>
+        <style>
+            body{
+                font-family: Arial,sans-serif;
+                text-align: center;
+                background-color: white;
+                margin: 20px;
+            }
+
+            #container{
+                background: white;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0px 0px 10px gray;
+                display: inline-block;
+                width: 80%;
+
+            }
+
+            input,button{
+                margin: 10px;
+                padding: 10px;
+                width: 80%;
+
+            }
+            button{
+                background: blue;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+            button:hover{
+                background: darkblue;
+            }
+            .results{
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            .results img,.results iframe {
+                margin: 10px;
+                width: 300px;
+                height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+<h1>Busca Inteligente</h1>
+<div id='container'>
+    <h2>Buscar Comandos</h2>
+    <input type='text'id='commandInput'placeholder='Digite um comando...'>
+    <button onclick="showCommand()">Exibir Comando</button>
+</div id='commandResult'></p>
+
+<h2>Buscar Imagens</h2>
+<input type='text'id='imageQuery'placeholder='Digite um termo para imagem...'>
+<button onclick="searchImage()">Buscar Imagem</button>
+</div id='imageResults'class='results'></div>
+
+<h2>Buscar Vídeos</h2>
+<input type="text" id="videoQuery" placeholder="Digite um termo para vídeo...">
+<button onclick="searchVideo()">Buscar Vídeo</button>
+<div id="videoResults" class="results"></div>
+</div>
+
+<script>
+    function showCommand(){
+        let command=document.getElementById('commandInput').value
+        document.getElementById('commandResult').innerHTML=Comando: ${command};  
+    }
+
+    function searchImage(){
+        let query=document.getElementById('imageQuery').value;
+        let imageUrl= `https://source.unsplash.com/300x200/?${query}`
+        document.getElementById('imageResults').innerHTML= <img src='${imageUrl}'alt='Imagem sobre ${query}'>
+    }
+
+    function searchImage(){
+        let query=document.getElementByld('imageQuery').value;
+        let imageUrl
+    }
+
+
+
+

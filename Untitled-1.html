@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Busca Inteligente</title>
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f0f0f0;
+        margin: 20px;
+    }
+
+
+#container {
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px gray;
+    display:inline-block;
+    width: 80%;  
+}
+
+input,button{
+    margin: 10px;
+    padding:10px;
+    width: 80%;
+}
+
+button{
+    background: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover{
+    background: darkblue;
+}
+
+.results{
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+}
+
+.results img,.results inframe{
+    margin: 10px;
+    width: 300px;
+    height: 200px;
+}
+</style>
+</head>
+<body>
+
+    <h1>Busca Inteligente</h1>
+    <div id="container">
+        <h2>Buscar Comandos</h2>
+        <input type="text"id="commandInput" placeholder="Digite um comando...">
+     <button onclick="showCommand()" >Exibir Comando</button>
+     <p id="commandResult" ></p>
+
+     <h2>Buscar Imagens</h2>
+     <input type="text"id="imageQuery" placeholder="Digite um termo para imagem...">
+     <button onclick="searchImage()" >Buscar Imagem</button>
+     <div id="imageResults" class="results"></div>
+    </div>
+
+    <h2>Buscar Vídeos</h2>
+    <input type="text"id="videoQuery" placeholder="Digite um termo para vídeo...">
+    <button onclick="searchVideo()" >Buscar Vídeo</button>
+    <div id="videoResults" class="results"></div>
+</div>
+
+<script>
+    function showCommand(){
+        let command=document.getElementById("commandInput").value;
+        document.getElementById("commandResult").innerHTML = Comando; $[command];
+    }
+    function searchImage(){
+        let query=document.getElementById("imageQuery").value;
+        let imageUrl='https source.unsplash.com/300x200/?${query}';
+        document.getElementById("imageResults").innerHTML=<img scr="${imageUrl}" alt="Imagem sobre
+        ${query}"></img>;
+    }
+
+    function searchVideo(){
+let query=document.getElementById("videoQuery").value;
+let imageUrl='https www.youtube.com/results?search_query=${query}';
+window.open(videoUrl,"_blank");
+    }
+</script>
+
+</body>
+</html>
